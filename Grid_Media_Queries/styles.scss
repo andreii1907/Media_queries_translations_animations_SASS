@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    width: 100vw;
+    height: 60px;
+    background-color:coral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+.content{
+    display: flex;
+    height: fit-content;
+
+    div:nth-of-type(1){
+        background-color: yellow;
+        flex-grow: 1;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    div:nth-of-type(2){
+        background-color: steelblue;
+        flex-basis: 0;
+        flex-grow: 2;
+        padding: 10px;
+    }
+
+    div:nth-of-type(3){
+        background-color: purple;
+        flex-grow: 1;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+footer{
+    width: 100%;
+    height: 60px;
+    background-color:lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+aside{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 720px){
+    header{
+        background-color: #071e22;
+        color: white;
+        height: 40px;
+        font-size: 15px;
+
+        p{
+            font-size: 15px; 
+        }
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        div:nth-of-type(2){
+            background-color: #1d7874;
+            order: 3;
+            font-size: 15px;
+            font-weight: bold;
+       }
+        div:nth-of-type(1){
+            background-color: #679289;
+            order: 2;
+            height: 40px;
+            font-size: 15px;
+            font-weight: bold;
+       }
+        div:nth-of-type(3){
+            background-color: #f4c095 ;
+            order: 1;
+            height: 40px;
+            font-size: 15px;
+            font-weight: bold;
+       }
+    }
+
+    footer{
+        background-color: #ee2e31;
+        height: 40px;
+    
+        p{
+            font-size: 15px; 
+        }
+    }
+}  
