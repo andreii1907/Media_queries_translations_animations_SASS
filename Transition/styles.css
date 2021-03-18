@@ -1,0 +1,86 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+}
+
+.square:first-of-type {
+  background-color: red;
+  margin: 20px;
+}
+
+.square:first-of-type:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  background-color: yellow;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 20px;
+}
+
+.container .square:nth-of-type(1) {
+  background-color: red;
+}
+
+.container .square:nth-of-type(2) {
+  background-color: blue;
+  margin: 20px;
+}
+
+.container:hover .square:nth-of-type(1) {
+  width: 200px;
+  -webkit-transition: width 500ms ease-out;
+  transition: width 500ms ease-out;
+}
+
+.container:hover .square:nth-of-type(2) {
+  width: 200px;
+  -webkit-transition: width 500ms ease-out 500ms;
+  transition: width 500ms ease-out 500ms;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background-image: url(https://picsum.photos/id/237/200/300);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+}
+
+.card:hover {
+  opacity: 0.8;
+  -webkit-transition: 300ms linear;
+  transition: 300ms linear;
+}
+
+.flip {
+  width: 300px;
+  height: 300px;
+  background-image: url(https://picsum.photos/200/300.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 20px;
+}
+
+.flip:hover {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+}
+/*# sourceMappingURL=styles.css.map */
