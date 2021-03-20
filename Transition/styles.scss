@@ -10,10 +10,10 @@
 .square:first-of-type{
     background-color: red;
     margin: 20px;
-
+    transition: transform 1s linear;
+   
     &:hover{
         transform: rotate(180deg);
-        transition: all 500ms ease-out;
         background-color: yellow;
     }
 }
@@ -23,29 +23,25 @@
     height: 300px;
     border: 1px solid black;
     margin: 20px;
-    
-    .square:nth-of-type(1){
-        background-color: red;
-  
+
+    .square:nth-child(1){
+    background-color: red;
+    transition: width 500ms linear;
  }
 
-    .square:nth-of-type(2){
+    .square:nth-child(2){
     background-color: blue;
     margin: 20px;
-
-    
+    transition: width 500ms linear 500ms;
 }
 
     &:hover{
-
-        .square:nth-of-type(1){
+        .square:nth-child(1){
             width: 200px;
-            transition: width 500ms ease-out;
         }
 
-        .square:nth-of-type(2){
+        .square:nth-child(2){
             width: 200px;
-            transition: width 500ms ease-out 500ms;
         }
         
     }
@@ -59,10 +55,10 @@
     background-size: cover;
     background-position: center;
     margin: 20px;
+    transition: opacity 300ms linear;
 
     &:hover{
        opacity: 0.8;
-       transition: 300ms linear;
     }
 }
 
@@ -74,10 +70,10 @@
         background-size: cover;
         background-position: center;
         margin: 20px;
+        transition: transform 1s linear;
     
         &:hover{
            transform: rotateX(180deg);
-           transition: transform 1s linear;
         }
     }
 
