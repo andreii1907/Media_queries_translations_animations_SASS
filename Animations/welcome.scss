@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(21, 69, 88);
+    color: #fff;
+    margin: 0;
+}
+
+h1{
+    text-align: center;
+    font-size: 44px;
+    margin: 0;
+    animation-name: welcome;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    
+    @keyframes welcome {
+        100%{
+            transform: translateY(300px);
+        }
+    }
+}  
+
+.container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    
+
+    p{
+        text-align: center;
+        line-height: 40px;
+        font-size: 24px;
+        animation-name: paragraph;
+        animation-duration: 1.2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-delay: 0.3s;
+        width: 80vw;
+        margin-right: 200vw;
+        @keyframes paragraph {
+            100%{
+                margin-right: 0;
+            }
+        }
+    }
+
+    button{
+        width: 150px;
+        height: 75px;
+        background: none;
+        color: white;
+        opacity: 0;
+        border: 1px solid white;
+        animation-name: button;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-delay: 2.3s;
+
+        &:hover{
+        cursor: pointer;
+        }
+
+        @keyframes button {
+            100%{
+                opacity: 1;
+            }
+        }
+    }
+}
