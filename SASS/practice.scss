@@ -1,0 +1,43 @@
+@import 'colors';
+@import 'reset';
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+@mixin anime {
+    animation-name: anime;
+    animation-duration: 2.5s; 
+    animation-timing-function: ease-in; 
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+}
+
+.color-animation {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    background-color: $primary-color;
+    @include anime();
+  }
+  
+  @keyframes anime {
+    0% {
+      transform: scale(0);
+      background-color: $primary-color;
+      border-radius: 100%;
+    }
+    50% {
+      background-color: $second-color;
+      border-radius: 50%;
+    }
+    100% {
+      transform: scale(4.2);
+      background-color: $third-color;
+    }
+  }
+  

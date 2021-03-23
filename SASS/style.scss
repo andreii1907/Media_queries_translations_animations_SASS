@@ -1,0 +1,54 @@
+@import 'colors';
+@import 'reset';
+
+body{
+    background-color: $background;
+}
+
+.loading{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @mixin animation {
+        animation-name: dots;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .load{
+        height: 30px;
+        width: 30px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        margin-left: 15px;
+        @include animation();
+    }
+
+    @mixin delay($anime-delay) {
+        animation-delay: $anime-delay ;
+    }
+
+    .load:nth-of-type(2){
+        @include anime-delay(0.2s);
+        background-color: $second-lcolor;
+    }
+
+    .load:nth-of-type(3){
+        @include anime-delay(0.4s);
+        background-color: $third-color;
+    }
+
+    @mixin transform($property){
+        transform: $property;
+    }
+    
+    @keyframes dots {
+        60%{
+           @include transform(translateY(40px));
+        }
+    }
+}
